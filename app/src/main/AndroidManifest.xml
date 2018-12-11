@@ -89,6 +89,10 @@
             android:name=".activity.BezierAbout.BezierAnimActivity"
             android:screenOrientation="portrait" />
 
+        <activity
+            android:name=".activity.MyTickActivity"
+            android:screenOrientation="portrait" />
+
     </application>
 
 </manifest>

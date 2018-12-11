@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         arrayList.add(new MessageBean(8, "自定义控件--基础篇(色彩矩阵篇)"));
         arrayList.add(new MessageBean(9, "自定义控件--基础篇(PorterDuffXfermode学习)"));
         arrayList.add(new MessageBean(10, "自定义控件--贝塞尔曲线学习"));
+        arrayList.add(new MessageBean(11, "自定义控件--休闲篇(2年前改的github上的项目,从中收益匪浅)"));
         adapter = new RecycleAdapter(this, this);
         adapter.setData(arrayList);
 
@@ -119,6 +120,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     case 10:
                         startActivity(new Intent(MainActivity.this, BezierActivity.class));
                         break;
+
+                    case 11:
+                        startActivity(new Intent(MainActivity.this, MyTickActivity.class));
+                        break;
+
                 }
                 break;
         }
