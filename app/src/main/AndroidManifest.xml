@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="comt.leo.picker.moreaboutview">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.MyViewandOnewActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.MyViewandTwoActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.MyViewandThreeActivity"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".activity.MyViewandFourActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.MyViewandFiveActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.MyViewandSixActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.MyViewandSevenActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.CircleProgressActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.PorterDuffActivity"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".activity.porterduffsons.NormalActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.porterduffsons.ModeClearActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.porterduffsons.ModeClearBetterActivity"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".activity.porterduffsons.SimpleCircleImageActivity"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".activity.BezierAbout.BezierActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.BezierAbout.SimpleSecondOrderActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.BezierAbout.ThirdOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.BezierAbout.BezierAnimActivity"
+            android:screenOrientation="portrait" />
+
+    </application>
+
+</manifest>

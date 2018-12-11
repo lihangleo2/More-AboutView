@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <comt.leo.picker.moreaboutview.myView.porterduffview.CircleImageLeoView
+        android:id="@+id/circleView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@mipmap/otherwoman" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/circleView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:text="【由此我又想增加2个属性，边框颜色和边框宽度】" />
+
+    <comt.leo.picker.moreaboutview.myView.porterduffview.CircleImageLeoView
+        android:id="@+id/circleView2"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        app:stoke_color="@color/leoColor"
+        app:stoke_width="5dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="这个圆角图片实现的原理也非常简单，关键点在于，改变控件大小的时候，图片bitmap也要跟着控件大小进行等比例缩放，这样实现这样的效果。否则无论你控件大小如何变化，bimap都不变，原图截取到的可能就只能看到鼻子了【具体看代码里注解】" />
+
+</RelativeLayout>

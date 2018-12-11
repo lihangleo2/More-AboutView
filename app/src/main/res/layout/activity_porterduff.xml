@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/buttonPanel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="普通绘制(不使用porterDuffmode)"
+                android:background="#cbcbca"
+                android:padding="12dp"
+                />
+
+
+            <TextView
+                android:layout_marginTop="15dp"
+                android:id="@+id/buttonPane2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="使用PorterDuff.Mode.CLEAR绘制蓝色矩形"
+                android:background="#cbcbca"
+                android:padding="12dp"
+                />
+
+
+            <TextView
+                android:layout_marginTop="15dp"
+                android:id="@+id/buttonPane3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="代码放到canvas.saveLayer()和canvas.restoreToCount()之间,再使用PorterDuff.Mode.CLEAR绘制蓝色矩形"
+                android:background="#cbcbca"
+                android:padding="12dp"
+                />
+
+
+            <TextView
+                android:layout_marginTop="15dp"
+                android:id="@+id/buttonPane4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="使用PorterDuff.Mode.SRC_IN，实现一个简单的圆形图片"
+                android:background="#cbcbca"
+                android:padding="12dp"
+                />
+
+
+            <TextView
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="其他PorterDuff.Mode模式是一样的，具体请参考csdn博客: https://blog.csdn.net/iispring/article/details/50472485"
+                android:padding="12dp"
+                />
+
+
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

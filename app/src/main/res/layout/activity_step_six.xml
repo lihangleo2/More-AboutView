@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <com.moxun.tagcloudlib.view.TagCloudView
+        android:id="@+id/fragment_tagcloud"
+        app:autoScrollMode="uniform"
+        app:darkColor="@color/tagDark"
+        app:lightColor="@color/tagLight"
+        app:radiusPercent="0.6"
+        app:scrollSpeed="3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <Button
+        android:id="@+id/buttonPanel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:text="启动动画" />
+</RelativeLayout>

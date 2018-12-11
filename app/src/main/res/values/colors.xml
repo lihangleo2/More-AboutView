@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="transt">#00000000</color>
+
+    <color name="tagLight">#b1c914</color>
+    <color name="tagDark">#206fa1</color>
+
+    <color name="view_show">#66000000</color>
+    <color name="leoColor">#ec74a0</color>
+    <color name="black">#000</color>
+    <color name="white">#fff</color>
+    <color name="grey">#cbc9c9</color>
+    <color name="leoBlackColor">#685f62</color>
+
+
+    <color name="color_1">#e99696</color>
+    <color name="color_2">#8ceb92</color>
+    <color name="color_3">#d8eb8b</color>
+    <color name="color_4">#8bddeb</color>
+    <color name="color_5">#8b9deb</color>
+    <color name="color_6">#ce8beb</color>
+    <color name="color_7">#ffffff</color>
+
+
+    <color name="porterDuff_yellow">#f2d232</color>
+    <color name="porterDuff_blue">#3272f2</color>
+
+
+
+
+    <color name="bezier_red">#f14242</color>
+    <color name="bezier_line">#dea105</color>
+
+
+
+
+
+
+</resources>
