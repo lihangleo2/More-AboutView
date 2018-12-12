@@ -10,6 +10,7 @@ import android.graphics.DashPathEffect;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.PathMeasure;
+import android.graphics.PorterDuff;
 import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -49,7 +50,6 @@ public class TickView extends View {
     private DashPathEffect effect;
 
 
-
     /**
      * 设置画圆动画
      */
@@ -79,7 +79,6 @@ public class TickView extends View {
     }
 
 
-
     public TickView(Context context) {
         this(context, null);
     }
@@ -101,7 +100,6 @@ public class TickView extends View {
                 }
             }
         });
-
 
 
         animatorSet.addListener(new Animator.AnimatorListener() {
@@ -140,7 +138,6 @@ public class TickView extends View {
         animator_circle.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator valueAnimator) {
-                isStart = true;
                 paint.setColor(getResources().getColor(R.color.pink));
                 currentProgress = (int) valueAnimator.getAnimatedValue();
                 postInvalidate();
@@ -159,9 +156,7 @@ public class TickView extends View {
         });
 
 
-
-
-        animator_scace = ValueAnimator.ofInt(radius,radius+50,radius);
+        animator_scace = ValueAnimator.ofInt(radius, radius + 50, radius);
         animator_scace.setDuration(600);
         animator_scace.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
@@ -226,31 +221,28 @@ public class TickView extends View {
         path.lineTo(getMeasuredHeight() / 3 * 2, getMeasuredHeight() / 5 * 2);
 
 
-        pathLeo.moveTo(getMeasuredWidth()/2-55,getMeasuredHeight()/2-50);
-        pathLeo.lineTo(getMeasuredWidth()/2+55,getMeasuredHeight()/2-50);
+        pathLeo.moveTo(getMeasuredWidth() / 2 - 55, getMeasuredHeight() / 2 - 50);
+        pathLeo.lineTo(getMeasuredWidth() / 2 + 55, getMeasuredHeight() / 2 - 50);
 
-        pathLeo.moveTo(getMeasuredWidth()/2,getMeasuredHeight()/2-80);
-        pathLeo.lineTo(getMeasuredWidth()/2,getMeasuredHeight()/2-10);
-
-
-        pathLeo.moveTo(getMeasuredWidth()/2,getMeasuredHeight()/2-50);
-        pathLeo.lineTo(getMeasuredWidth()/2-70,getMeasuredHeight()/2);
-
-        pathLeo.moveTo(getMeasuredWidth()/2,getMeasuredHeight()/2-50);
-        pathLeo.lineTo(getMeasuredWidth()/2+70,getMeasuredHeight()/2);
+        pathLeo.moveTo(getMeasuredWidth() / 2, getMeasuredHeight() / 2 - 80);
+        pathLeo.lineTo(getMeasuredWidth() / 2, getMeasuredHeight() / 2 - 10);
 
 
-        pathLeo.moveTo(getMeasuredWidth()/2-35 ,getMeasuredHeight()/2-10);
-        pathLeo.lineTo(getMeasuredWidth()/2+35 ,getMeasuredHeight()/2-10);
-        pathLeo.lineTo(getMeasuredWidth()/2,getMeasuredHeight()/2+20);
-        pathLeo.lineTo(getMeasuredWidth()/2,getMeasuredHeight()/2+70);
-        pathLeo.lineTo( getMeasuredWidth()/2-25,getMeasuredHeight()/2+60);
+        pathLeo.moveTo(getMeasuredWidth() / 2, getMeasuredHeight() / 2 - 50);
+        pathLeo.lineTo(getMeasuredWidth() / 2 - 70, getMeasuredHeight() / 2);
 
-        pathLeo.moveTo(getMeasuredWidth()/2-50 ,getMeasuredHeight()/2+30);
-        pathLeo.lineTo(getMeasuredWidth()/2+50 ,getMeasuredHeight()/2+30);
+        pathLeo.moveTo(getMeasuredWidth() / 2, getMeasuredHeight() / 2 - 50);
+        pathLeo.lineTo(getMeasuredWidth() / 2 + 70, getMeasuredHeight() / 2);
 
 
+        pathLeo.moveTo(getMeasuredWidth() / 2 - 35, getMeasuredHeight() / 2 - 10);
+        pathLeo.lineTo(getMeasuredWidth() / 2 + 35, getMeasuredHeight() / 2 - 10);
+        pathLeo.lineTo(getMeasuredWidth() / 2, getMeasuredHeight() / 2 + 20);
+        pathLeo.lineTo(getMeasuredWidth() / 2, getMeasuredHeight() / 2 + 70);
+        pathLeo.lineTo(getMeasuredWidth() / 2 - 25, getMeasuredHeight() / 2 + 60);
 
+        pathLeo.moveTo(getMeasuredWidth() / 2 - 50, getMeasuredHeight() / 2 + 30);
+        pathLeo.lineTo(getMeasuredWidth() / 2 + 50, getMeasuredHeight() / 2 + 30);
 
 
         pathMeasure = new PathMeasure(pathLeo, true);
@@ -262,27 +254,33 @@ public class TickView extends View {
         super.onDraw(canvas);
 
         if (!isStart) {
+            oKpaint.setColor(getResources().getColor(R.color.grey));
+
+            paint.setStyle(Paint.Style.STROKE);
+            paint.setStrokeWidth(dp2px(2));
+            paint.setColor(getResources().getColor(R.color.grey));
             canvas.drawArc(mRectF, 90, 360, false, paint);
             canvas.drawPath(path, oKpaint);
-            return;
-        }
 
-        canvas.drawArc(mRectF, 90, currentProgress, false, paint);
+        } else {
+            canvas.drawArc(mRectF, 90, currentProgress, false, paint);
 
-        if (currentProgress == 360) {
-            paint.setStyle(Paint.Style.FILL_AND_STROKE);
-        }
+            if (currentProgress == 360) {
+                paint.setStyle(Paint.Style.FILL_AND_STROKE);
+            }
+            circlePaint.setColor(Color.WHITE);
+            canvas.drawCircle(centerX, centerY, whiteRadius, circlePaint);
+            if (whiteRadius == 0) {
+                Log.e("应该走了的啊", scaceRadius + "");
+                circlePaint.setColor(getResources().getColor(R.color.pink));
+                canvas.drawCircle(centerX, centerY, scaceRadius, circlePaint);
+            }
 
-        canvas.drawCircle(centerX, centerY, whiteRadius, circlePaint);
-        if (whiteRadius==0){
-            Log.e("应该走了的啊",scaceRadius+"");
-            circlePaint.setColor(getResources().getColor(R.color.pink));
-            canvas.drawCircle(centerX, centerY, scaceRadius, circlePaint);
-        }
+            if (startLine) {
+                oKpaint.setColor(Color.BLACK);
+                canvas.drawPath(pathLeo, oKpaint);
+            }
 
-        if (startLine){
-            oKpaint.setColor(Color.BLACK);
-            canvas.drawPath(pathLeo,oKpaint);
         }
 
 
@@ -296,8 +294,22 @@ public class TickView extends View {
 
     public void start() {
 //        animatorSet.play(animator_circle).before(animator_white).before(animator_scace);
-        animatorSet.play(animator_white).after(animator_circle).before(animator_scace).before(animator_line);
-        animatorSet.start();
+        if (isStart) {
+
+            isStart = false;
+            postInvalidate();
+
+        } else {
+            currentProgress = 0;
+            whiteRadius = -1;
+            scaceRadius = 100;
+            effect = new DashPathEffect(new float[]{pathMeasure.getLength(), pathMeasure.getLength()}, 1 * pathMeasure.getLength());
+            oKpaint.setPathEffect(effect);
+
+            isStart = true;
+            animatorSet.play(animator_white).after(animator_circle).before(animator_scace).before(animator_line);
+            animatorSet.start();
+        }
     }
 
 
@@ -307,8 +319,6 @@ public class TickView extends View {
 
         void onAnimFish();
     }
-
-
 
 
 }
