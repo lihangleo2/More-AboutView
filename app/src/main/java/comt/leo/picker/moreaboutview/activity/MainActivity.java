@@ -15,6 +15,8 @@ import java.util.ArrayList;
 
 import comt.leo.picker.moreaboutview.R;
 import comt.leo.picker.moreaboutview.activity.BezierAbout.BezierActivity;
+import comt.leo.picker.moreaboutview.activity.CubeAbout.CubeMenuActivity;
+import comt.leo.picker.moreaboutview.activity.SurfaceViewAbout.SufaceIntroduceActivity;
 import comt.leo.picker.moreaboutview.adapter.RecycleAdapter;
 import comt.leo.picker.moreaboutview.bean.MessageBean;
 import comt.leo.picker.moreaboutview.recyevent.OnRecyclerItemClickListener;
@@ -47,6 +49,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         arrayList.add(new MessageBean(9, "自定义控件--基础篇(PorterDuffXfermode学习)"));
         arrayList.add(new MessageBean(10, "自定义控件--贝塞尔曲线学习"));
         arrayList.add(new MessageBean(11, "自定义控件--休闲篇(2年前改的github上的项目,从中收益匪浅)"));
+        arrayList.add(new MessageBean(12, "自定义控件--SurfaceView学习"));
+        arrayList.add(new MessageBean(13, "自定义控件--3D动画的实现(个人统称3D动画)"));
         adapter = new RecycleAdapter(this, this);
         adapter.setData(arrayList);
 
@@ -124,6 +128,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     case 11:
                         startActivity(new Intent(MainActivity.this, MyTickActivity.class));
                         break;
+                    case 12:
+                        startActivity(new Intent(MainActivity.this, SufaceIntroduceActivity.class));
+                        break;
+
+                    case 13:
+                        startActivity(new Intent(MainActivity.this, CubeMenuActivity.class));
+                        break;
+
 
                 }
                 break;

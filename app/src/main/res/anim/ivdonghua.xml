@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<translate
+    	android:propertyName="translationY"
+    	android:duration="1000"
+    	android:valueType="floatType"
+    	android:fromXDelta="0"
+    	android:fromYDelta="-100%p"
+    	android:toXDelta="0"
+    	android:toYDelta="0"
+    	android:fillAfter="true"
+    	android:interpolator="@android:anim/bounce_interpolator"
+    	xmlns:android="http://schemas.android.com/apk/res/android">
+    
+
+</translate>

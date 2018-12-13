@@ -93,6 +93,22 @@
             android:name=".activity.MyTickActivity"
             android:screenOrientation="portrait" />
 
+        <activity
+            android:name=".activity.SurfaceViewAbout.SufaceIntroduceActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.CubeAbout.CubeMenuActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.CubeAbout.AttrbuteActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.CubeAbout.AttrbuteWelComeActivity"
+            android:screenOrientation="portrait" />
+
     </application>
 
 </manifest>

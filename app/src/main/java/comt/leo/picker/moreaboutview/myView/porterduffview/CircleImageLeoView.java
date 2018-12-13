@@ -17,6 +17,7 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.Nullable;
+import android.transition.Transition;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
@@ -103,6 +104,7 @@ public class CircleImageLeoView extends ImageView {
             int r = Math.min(getWidth(), getHeight());
             canvas.drawCircle(getWidth() / 2, getHeight() / 2, r / 2-circleWith/2, paintSelf);
         }
+
     }
 
 
@@ -233,4 +235,5 @@ public class CircleImageLeoView extends ImageView {
         float scale = context.getResources().getDisplayMetrics().density;
         return (int) (dipValue * scale + 0.5f);
     }
+
 }
