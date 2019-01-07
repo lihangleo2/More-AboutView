@@ -109,6 +109,10 @@
             android:name=".activity.CubeAbout.AttrbuteWelComeActivity"
             android:screenOrientation="portrait" />
 
+        <activity
+            android:name=".activity.CubeAbout.MatrixCameraActivity"
+            android:screenOrientation="portrait" />
+
     </application>
 
 </manifest>

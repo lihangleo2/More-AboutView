@@ -24,5 +24,12 @@ public class CubeMenuActivity extends AppCompatActivity {
                 startActivity(new Intent(CubeMenuActivity.this, AttrbuteWelComeActivity.class));
             }
         });
+
+        findViewById(R.id.buttonPane2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(CubeMenuActivity.this, MatrixCameraActivity.class));
+            }
+        });
     }
 }
