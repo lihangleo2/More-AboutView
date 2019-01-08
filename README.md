@@ -27,6 +27,13 @@
 
 
 
+
+|PorterDuff实现镂空布局|
+|:---:|
+|![](https://github.com/lihangleo2/More-AboutView/blob/master/6%E9%95%82%E7%A9%BA%E5%B8%83%E5%B1%80.gif)|
+
+
+
 ## 其他作品（推广下我的项目）
 [共享元素小图到大图浏览，即recycleView到viewPager,pager左右滑动，共享动画item改变](https://github.com/lihangleo2/mPro)  
 
