@@ -31,5 +31,20 @@ public class CubeMenuActivity extends AppCompatActivity {
                 startActivity(new Intent(CubeMenuActivity.this, MatrixCameraActivity.class));
             }
         });
+
+
+        findViewById(R.id.buttonPane3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(CubeMenuActivity.this, MatrixCameraSecondActivity.class));
+            }
+        });
+
+        findViewById(R.id.buttonPane4).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(CubeMenuActivity.this, MatrixCameraTwoSizeActivity.class));
+            }
+        });
     }
 }

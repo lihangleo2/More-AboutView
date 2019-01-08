@@ -30,7 +30,7 @@
                 android:layout_marginTop="15dp"
                 android:background="#cbcbca"
                 android:padding="12dp"
-                android:text="Matrix + Camera 实现3D效果" />
+                android:text="Matrix + Camera 实现3D效果(一)" />
 
             <TextView
                 android:id="@+id/buttonPane3"
@@ -39,7 +39,17 @@
                 android:layout_marginTop="15dp"
                 android:background="#cbcbca"
                 android:padding="12dp"
-                android:text="贝塞尔路径动画" />
+                android:text="Matrix + Camera 实现3D效果(二)" />
+
+
+            <TextView
+                android:id="@+id/buttonPane4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="#cbcbca"
+                android:padding="12dp"
+                android:text="Matrix + Camera 实现3D效果(三*卡片翻转到另一个布局)" />
 
 
         </LinearLayout>
