@@ -122,6 +122,26 @@
             android:name=".activity.CubeAbout.MatrixCameraTwoSizeActivity"
             android:screenOrientation="portrait" />
 
+        <activity
+            android:name=".activity.attributeanim.MyAttributeActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.attributeanim.MyAnimOneActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.attributeanim.MyAnimTwoActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.attributeanim.MyAnimThreeActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.attributeanim.MyAnimFourActivity"
+            android:screenOrientation="portrait" />
+
     </application>
 
 </manifest>
