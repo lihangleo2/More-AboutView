@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         arrayList.add(new MessageBean(11, "自定义控件--休闲篇(2年前改的github上的项目,从中收益匪浅)"));
         arrayList.add(new MessageBean(12, "自定义控件--SurfaceView学习"));
         arrayList.add(new MessageBean(13, "自定义控件--3D动画的实现(个人统称3D动画)"));
-        arrayList.add(new MessageBean(14, "项目中运用的属性动画(记录)"));
+        arrayList.add(new MessageBean(14, "项目用到一些效果动画阴影"));
         adapter = new RecycleAdapter(this, this);
         adapter.setData(arrayList);
 

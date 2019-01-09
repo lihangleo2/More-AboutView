@@ -45,5 +45,19 @@ public class MyAttributeActivity extends AppCompatActivity {
                 startActivity(new Intent(MyAttributeActivity.this, MyAnimFourActivity.class));
             }
         });
+
+        findViewById(R.id.buttonPane5).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MyAttributeActivity.this, MyShowActivity.class));
+            }
+        });
+
+        findViewById(R.id.buttonPane6).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MyAttributeActivity.this, MyZanShowActivity.class));
+            }
+        });
     }
 }

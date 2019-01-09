@@ -51,6 +51,25 @@
                 android:padding="12dp"
                 android:text="waveView 线条动画" />
 
+            <TextView
+                android:id="@+id/buttonPane5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="#cbcbca"
+                android:padding="12dp"
+                android:text="实现类似cardView的阴影" />
+
+
+            <TextView
+                android:id="@+id/buttonPane6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="#cbcbca"
+                android:padding="12dp"
+                android:text="点赞动画的实现。" />
+
 
         </LinearLayout>
 
