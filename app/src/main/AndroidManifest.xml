@@ -150,6 +150,28 @@
             android:name=".activity.attributeanim.MyZanShowActivity"
             android:screenOrientation="portrait" />
 
+        <activity
+            android:name=".activity.MagicIndicatorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.systemviewself.SystemViewSelfActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.systemviewself.RatingBarActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.systemviewself.ToggleButtonActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.systemviewself.SeekBarActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.systemviewself.ProgressBarActivity"
+            android:screenOrientation="portrait" />
+
     </application>
 
 </manifest>

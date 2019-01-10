@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/buttonPanel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#cbcbca"
+                android:padding="12dp"
+                android:text="RatingBar自定义样式" />
+
+            <TextView
+                android:id="@+id/buttonPane2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="#cbcbca"
+                android:padding="12dp"
+                android:text="横向progressBar自定义样式" />
+
+            <TextView
+                android:id="@+id/buttonPane3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="#cbcbca"
+                android:padding="12dp"
+                android:text="ToggleButton(switch Button)" />
+
+            <TextView
+                android:id="@+id/buttonPane4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="#cbcbca"
+                android:padding="12dp"
+                android:text="seekBar自定义样式" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

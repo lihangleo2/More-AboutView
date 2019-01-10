@@ -40,5 +40,12 @@
 
 
 
+    <color name="transparent">#00000000</color>
+    <color name="blackbb">#bbbbbb</color>
+    <color name="mine_color">#855a20</color>
+    <color name="line">#EEEEEE</color>
 
+    <color name="seekbar_bg">#0000ff00</color>
+    <color name="seekbar_progress_second">#0000ff00</color>
+    <color name="seekbar_progress">#0000ff00</color>
 </resources>

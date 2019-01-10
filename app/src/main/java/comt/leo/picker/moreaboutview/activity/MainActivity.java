@@ -18,6 +18,7 @@ import comt.leo.picker.moreaboutview.activity.BezierAbout.BezierActivity;
 import comt.leo.picker.moreaboutview.activity.CubeAbout.CubeMenuActivity;
 import comt.leo.picker.moreaboutview.activity.SurfaceViewAbout.SufaceIntroduceActivity;
 import comt.leo.picker.moreaboutview.activity.attributeanim.MyAttributeActivity;
+import comt.leo.picker.moreaboutview.activity.systemviewself.SystemViewSelfActivity;
 import comt.leo.picker.moreaboutview.adapter.RecycleAdapter;
 import comt.leo.picker.moreaboutview.bean.MessageBean;
 import comt.leo.picker.moreaboutview.recyevent.OnRecyclerItemClickListener;
@@ -53,6 +54,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         arrayList.add(new MessageBean(12, "自定义控件--SurfaceView学习"));
         arrayList.add(new MessageBean(13, "自定义控件--3D动画的实现(个人统称3D动画)"));
         arrayList.add(new MessageBean(14, "项目用到一些效果动画阴影"));
+        arrayList.add(new MessageBean(15, "项目用到----viewPager和fragment的好搭档"));
+        arrayList.add(new MessageBean(16, "系统控件--自定义样式"));
         adapter = new RecycleAdapter(this, this);
         adapter.setData(arrayList);
 
@@ -138,9 +141,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         startActivity(new Intent(MainActivity.this, CubeMenuActivity.class));
                         break;
                     case 14:
-                        startActivity(new Intent(MainActivity.this,MyAttributeActivity.class));
+                        startActivity(new Intent(MainActivity.this, MyAttributeActivity.class));
                         break;
-
+                    case 15:
+                        startActivity(new Intent(MainActivity.this, MagicIndicatorActivity.class));
+                        break;
+                    case 16:
+                        startActivity(new Intent(MainActivity.this, SystemViewSelfActivity.class));
+                        break;
 
                 }
                 break;
