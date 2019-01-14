@@ -18,6 +18,10 @@ import comt.leo.picker.moreaboutview.bean.NewImpressItemBean;
 /**
  * Created by leo
  * on 2019/1/14.
+ * <p>
+ * app build.gradle  添加依赖 ： implementation 'com.zhy:flowlayout-lib:1.0.3'
+ * 这是自适应标签的 一个依赖。
+ * 点击张开和收起 则是利用了recycleView adapter 的 remove and insert
  */
 public class RecycleViewTagActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -28,6 +32,7 @@ public class RecycleViewTagActivity extends AppCompatActivity implements View.On
 
     //需要展开的那个条目
     private NewImpressItemBean addBeauImpressBean;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -129,7 +134,7 @@ public class RecycleViewTagActivity extends AppCompatActivity implements View.On
         impressSonBean7.setTitle("无与伦比");
         tagList.add(impressSonBean7);
 
-        ImpressSonBean impressSonBean8= new ImpressSonBean();
+        ImpressSonBean impressSonBean8 = new ImpressSonBean();
         impressSonBean8.setTitle("时尚");
         tagList.add(impressSonBean8);
 
@@ -139,7 +144,7 @@ public class RecycleViewTagActivity extends AppCompatActivity implements View.On
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.text_zhankItem:
                 //点击展开条目的时候触发
                 NewImpressItemBean zhankBean = (NewImpressItemBean) view.getTag();
