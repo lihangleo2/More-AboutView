@@ -56,6 +56,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         arrayList.add(new MessageBean(14, "项目用到一些效果动画阴影"));
         arrayList.add(new MessageBean(15, "项目用到----viewPager和fragment的好搭档"));
         arrayList.add(new MessageBean(16, "系统控件--自定义样式"));
+        arrayList.add(new MessageBean(17, "类似通讯录按字母排序"));
+        arrayList.add(new MessageBean(18, "StickyListHeaders实现粘性悬浮头"));
+        arrayList.add(new MessageBean(19, "viewPager自定义无限循环广告栏"));
+        arrayList.add(new MessageBean(20, "自适应标签和recycleView实现更多展开，收起"));
         adapter = new RecycleAdapter(this, this);
         adapter.setData(arrayList);
 
@@ -114,29 +118,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     case 6:
                         startActivity(new Intent(MainActivity.this, MyViewandFiveActivity.class));
                         break;
-
                     case 7:
                         startActivity(new Intent(MainActivity.this, MyViewandSixActivity.class));
                         break;
-
                     case 8:
                         startActivity(new Intent(MainActivity.this, MyViewandSevenActivity.class));
                         break;
-
                     case 9:
                         startActivity(new Intent(MainActivity.this, PorterDuffActivity.class));
                         break;
                     case 10:
                         startActivity(new Intent(MainActivity.this, BezierActivity.class));
                         break;
-
                     case 11:
                         startActivity(new Intent(MainActivity.this, MyTickActivity.class));
                         break;
                     case 12:
                         startActivity(new Intent(MainActivity.this, SufaceIntroduceActivity.class));
                         break;
-
                     case 13:
                         startActivity(new Intent(MainActivity.this, CubeMenuActivity.class));
                         break;
@@ -148,6 +147,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         break;
                     case 16:
                         startActivity(new Intent(MainActivity.this, SystemViewSelfActivity.class));
+                        break;
+                    case 17:
+                        startActivity(new Intent(MainActivity.this, PingyActivity.class));
+                        break;
+                    case 18:
+                        startActivity(new Intent(MainActivity.this, StickeyHeadActivity.class));
+                        break;
+                    case 19:
+                        startActivity(new Intent(MainActivity.this, ViewPagerSelfActivity.class));
+                        break;
+                    case 20:
+                        startActivity(new Intent(MainActivity.this, RecycleViewTagActivity.class));
                         break;
 
                 }

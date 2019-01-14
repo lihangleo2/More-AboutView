@@ -172,6 +172,22 @@
             android:name=".activity.systemviewself.ProgressBarActivity"
             android:screenOrientation="portrait" />
 
+        <activity
+            android:name=".activity.PingyActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.StickeyHeadActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.ViewPagerSelfActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.RecycleViewTagActivity"
+            android:screenOrientation="portrait" />
+
     </application>
 
 </manifest>

@@ -48,4 +48,9 @@
     <color name="seekbar_bg">#0000ff00</color>
     <color name="seekbar_progress_second">#0000ff00</color>
     <color name="seekbar_progress">#0000ff00</color>
+
+    <color name="darkgrey">#C0C0C0</color>
+    <color name="light_line">#f6f8fa</color>
+    <color name="theme_text_black2d">#2d2d2d</color>
+    <color name="base_color">#ffffff</color>
 </resources>

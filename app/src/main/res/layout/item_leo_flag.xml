@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="5dp"
+    >
+
+    <TextView
+        android:id="@+id/text_point_num"
+        android:layout_toRightOf="@+id/text_content"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:background="@drawable/simple_count_badge_bg"
+        android:gravity="center"
+        android:text="3"
+        android:textColor="@android:color/white"
+        android:textSize="8dp"
+        />
+
+    <TextView
+        android:layout_marginTop="6dp"
+        android:id="@+id/text_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#484848"
+        android:textSize="14dp" />
+
+
+</RelativeLayout>
