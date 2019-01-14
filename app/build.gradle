@@ -33,4 +33,13 @@ dependencies {
     implementation 'com.github.hackware1993:MagicIndicator:1.5.0'
     //ToggleButton 依赖
     implementation 'com.zcw:togglebutton-library:1.0.0'
+    implementation files('libs/pinyin4j-2.5.0.jar')
+    implementation project(':quicksidebar')
+
+    //粘性头部的依赖
+    implementation 'se.emilsjolander:stickylistheaders:2.7.0'
+
+    
+    //自适应标签 依赖
+    implementation 'com.zhy:flowlayout-lib:1.0.3'
 }
