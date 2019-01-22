@@ -1,1 +1,1 @@
-include ':app', ':tagcloudlib', ':quicksidebar'
+include ':app', ':tagcloudlib', ':quicksidebar', ':library'
