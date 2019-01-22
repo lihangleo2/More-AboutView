@@ -18,7 +18,10 @@ import comt.leo.picker.moreaboutview.activity.BezierAbout.BezierActivity;
 import comt.leo.picker.moreaboutview.activity.CubeAbout.CubeMenuActivity;
 import comt.leo.picker.moreaboutview.activity.SurfaceViewAbout.SufaceIntroduceActivity;
 import comt.leo.picker.moreaboutview.activity.attributeanim.MyAttributeActivity;
+import comt.leo.picker.moreaboutview.activity.expresspkg.ExprssActivity;
 import comt.leo.picker.moreaboutview.activity.systemviewself.SystemViewSelfActivity;
+import comt.leo.picker.moreaboutview.activity.viewpagerandfragment.MagicIndicatorActivity;
+import comt.leo.picker.moreaboutview.activity.viewpagerandfragment.ViewFragmentActivity;
 import comt.leo.picker.moreaboutview.adapter.RecycleAdapter;
 import comt.leo.picker.moreaboutview.bean.MessageBean;
 import comt.leo.picker.moreaboutview.recyevent.OnRecyclerItemClickListener;
@@ -60,6 +63,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         arrayList.add(new MessageBean(18, "StickyListHeaders实现粘性悬浮头"));
         arrayList.add(new MessageBean(19, "viewPager自定义无限循环广告栏"));
         arrayList.add(new MessageBean(20, "自适应标签和recycleView实现更多展开，收起"));
+        arrayList.add(new MessageBean(21, "android将系统表情转换成ios表情"));
         adapter = new RecycleAdapter(this, this);
         adapter.setData(arrayList);
 
@@ -143,7 +147,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         startActivity(new Intent(MainActivity.this, MyAttributeActivity.class));
                         break;
                     case 15:
-                        startActivity(new Intent(MainActivity.this, MagicIndicatorActivity.class));
+                        startActivity(new Intent(MainActivity.this, ViewFragmentActivity.class));
                         break;
                     case 16:
                         startActivity(new Intent(MainActivity.this, SystemViewSelfActivity.class));
@@ -159,6 +163,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         break;
                     case 20:
                         startActivity(new Intent(MainActivity.this, RecycleViewTagActivity.class));
+                        break;
+                    case 21:
+                        startActivity(new Intent(MainActivity.this, ExprssActivity.class));
                         break;
 
                 }

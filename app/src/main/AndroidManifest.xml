@@ -151,7 +151,7 @@
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".activity.MagicIndicatorActivity"
+            android:name=".activity.viewpagerandfragment.MagicIndicatorActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".activity.systemviewself.SystemViewSelfActivity"
@@ -186,6 +186,26 @@
 
         <activity
             android:name=".activity.RecycleViewTagActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.expresspkg.ExprssActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleFullscreen"
+            android:windowSoftInputMode="adjustPan"
+            />
+
+        <activity
+            android:name=".activity.expresspkg.SingleChatActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleFullscreen"
+            android:windowSoftInputMode="adjustResize"
+            />
+
+        <activity
+            android:name=".activity.viewpagerandfragment.ViewFragmentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.viewpagerandfragment.PagerAndPagerActivity"
             android:screenOrientation="portrait" />
 
     </application>

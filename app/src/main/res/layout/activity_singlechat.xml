@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvSingleChat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/relativeBottom"
+        android:background="#efeff4" />
+
+
+    <RelativeLayout
+        android:id="@+id/relativeBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+
+        <TextView
+            android:id="@+id/text_line"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_above="@+id/linear_bottom"
+            android:background="#ffcdcdcd" />
+
+        <LinearLayout
+            android:id="@+id/linear_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="7dp">
+
+            <EditText
+                android:id="@+id/edit_content"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_line_selector"
+                android:hint="请输入内容"
+                android:imeOptions="actionSend"
+                android:inputType="text"
+                android:maxLength="150"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:singleLine="false"
+                android:textColor="#000"
+                android:textColorHint="#9A9A9A"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

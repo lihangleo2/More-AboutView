@@ -1,16 +1,17 @@
-package comt.leo.picker.moreaboutview.activity;
+package comt.leo.picker.moreaboutview.activity.viewpagerandfragment.someabout;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.DecelerateInterpolator;
-import android.widget.ImageView;
 
 import net.lucode.hackware.magicindicator.MagicIndicator;
 import net.lucode.hackware.magicindicator.ViewPagerHelper;
@@ -22,59 +23,57 @@ import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.IPagerTit
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.indicators.LinePagerIndicator;
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.titles.ColorTransitionPagerTitleView;
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.titles.SimplePagerTitleView;
-import net.lucode.hackware.magicindicator.buildins.commonnavigator.titles.badge.BadgeAnchor;
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.titles.badge.BadgePagerTitleView;
-import net.lucode.hackware.magicindicator.buildins.commonnavigator.titles.badge.BadgeRule;
 
 import java.util.ArrayList;
 
 import comt.leo.picker.moreaboutview.R;
-import comt.leo.picker.moreaboutview.adapter.ViewPagerFragmentMoreAdapter;
 
 /**
  * Created by leo
- * on 2019/1/9.
- * <p>
- * app build 添加依赖：implementation 'com.github.hackware1993:MagicIndicator:1.5.0'
- * <p>
- * 项目build:
- * <p>
- * maven {
- * url "https://jitpack.io"
- * }
+ * on 2019/1/16.
  */
-public class MagicIndicatorActivity extends AppCompatActivity {
-
+public class ViewPagerFragemnt extends Fragment {
     private ViewPager viewPager;
     MagicIndicator magicIndicator;
-    private ViewPagerFragmentMoreAdapter adapter;
-    private ArrayList<String> mDataList = new ArrayList<>();
+    private ViewPagerFragmentAdapter adapter;
+    private ArrayList<Fragment> mDataList = new ArrayList<>();
     private CommonNavigator commonNavigator;
 
-    ImageView badgeImageView;//第一个红点
 
-    @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_magicindicator);
-        viewPager = findViewById(R.id.viewPagerQuestion);
-        magicIndicator = findViewById(R.id.magic_indicator_question);
-
-        for (int i = 0; i < 10; i++) {
-            mDataList.add("页面_" + i);
-        }
-
-        adapter = new ViewPagerFragmentMoreAdapter(getSupportFragmentManager(), mDataList);
-        viewPager.setAdapter(adapter);
-
-        badgeImageView = (ImageView) LayoutInflater.from(MagicIndicatorActivity.this).inflate(R.layout.simple_red_dot_badge_layout, null);
-
-        initMagicIndicator();
+    public static ViewPagerFragemnt newInstance() {
+        ViewPagerFragemnt fragment = new ViewPagerFragemnt();
+        return fragment;
     }
+
+    View view;
+
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        if (view == null) {
+            view = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_other, null);
+            viewPager = view.findViewById(R.id.viewPagerQuestionOther);
+            magicIndicator = view.findViewById(R.id.magic_indicator_questionOther);
+
+            NomalSonFragment nomalFragment = NomalSonFragment.newInstance(1);
+            NomalSonFragment nomalFragment2 = NomalSonFragment.newInstance(2);
+            NomalSonFragment nomalFragment3 = NomalSonFragment.newInstance(3);
+            mDataList.add(nomalFragment);
+            mDataList.add(nomalFragment2);
+            mDataList.add(nomalFragment3);
+
+            adapter = new ViewPagerFragmentAdapter(getActivity().getSupportFragmentManager(), mDataList);
+            viewPager.setAdapter(adapter);
+            initMagicIndicator();
+        }
+        return view;
+    }
+
 
     private void initMagicIndicator() {
         magicIndicator.setBackgroundColor(getResources().getColor(R.color.transparent));
-        commonNavigator = new CommonNavigator(MagicIndicatorActivity.this);
+        commonNavigator = new CommonNavigator(getActivity());
         commonNavigator.setAdapter(new CommonNavigatorAdapter() {
             @Override
             public int getCount() {
@@ -86,7 +85,7 @@ public class MagicIndicatorActivity extends AppCompatActivity {
                 final BadgePagerTitleView badgePagerTitleView = new BadgePagerTitleView(context);
 
                 SimplePagerTitleView simplePagerTitleView = new ColorTransitionPagerTitleView(context);
-                simplePagerTitleView.setText(mDataList.get(index));
+                simplePagerTitleView.setText("子页面-" + index);
                 simplePagerTitleView.setNormalColor(getResources().getColor(R.color.blackbb));
                 simplePagerTitleView.setSelectedColor(getResources().getColor(R.color.mine_color));
                 simplePagerTitleView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 12);
@@ -121,13 +120,5 @@ public class MagicIndicatorActivity extends AppCompatActivity {
         });
         magicIndicator.setNavigator(commonNavigator);
         ViewPagerHelper.bind(magicIndicator, viewPager);
-
-        //添加小红点相关
-        ((BadgePagerTitleView) commonNavigator.getPagerTitleView(3)).setBadgeView(badgeImageView);
-        ((BadgePagerTitleView) commonNavigator.getPagerTitleView(3)).setXBadgeRule(new BadgeRule(BadgeAnchor.CONTENT_RIGHT, -UIUtil.dip2px(MagicIndicatorActivity.this, 6)));
-        ((BadgePagerTitleView) commonNavigator.getPagerTitleView(3)).setYBadgeRule(new BadgeRule(BadgeAnchor.CONTENT_TOP, 0));
-
-        //这个设置 选中tab时小红点要不要取消
-        ((BadgePagerTitleView) commonNavigator.getPagerTitleView(3)).setAutoCancelBadge(true);
     }
 }

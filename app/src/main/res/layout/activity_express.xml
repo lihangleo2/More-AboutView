@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    >
+
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonPane2"
+        android:text="聊天布局"
+        android:layout_alignParentRight="true"
+        />
+
+    <Button
+        android:text="评论"
+        android:id="@+id/buttonPanel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        />
+    <io.github.rockerhieu.emojicon.EmojiconTextView
+        android:layout_below="@+id/buttonPanel"
+        android:id="@+id/txtEmojicon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:textColor="#000"
+        android:textSize="16dp"
+        emojicon:emojiconAlignment="baseline"
+        emojicon:emojiconSize="16dp" />
+</RelativeLayout>
