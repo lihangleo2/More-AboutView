@@ -4,7 +4,7 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "comt.leo.picker.moreaboutview"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -33,15 +33,12 @@ dependencies {
     implementation 'com.github.hackware1993:MagicIndicator:1.5.0'
     //ToggleButton 依赖
     implementation 'com.zcw:togglebutton-library:1.0.0'
-
     //这里是类似通讯录 按字母排序
     implementation files('libs/pinyin4j-2.5.0.jar')
     implementation project(':quicksidebar')
-
     //粘性头部的依赖
     implementation 'se.emilsjolander:stickylistheaders:2.7.0'
-
-    
     //自适应标签 依赖
     implementation 'com.zhy:flowlayout-lib:1.0.3'
+    implementation project(':library')
 }
