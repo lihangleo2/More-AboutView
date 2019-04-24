@@ -24,6 +24,7 @@ import comt.leo.picker.moreaboutview.activity.viewpagerandfragment.MagicIndicato
 import comt.leo.picker.moreaboutview.activity.viewpagerandfragment.ViewFragmentActivity;
 import comt.leo.picker.moreaboutview.adapter.RecycleAdapter;
 import comt.leo.picker.moreaboutview.bean.MessageBean;
+import comt.leo.picker.moreaboutview.popupwindow.PopupActivity;
 import comt.leo.picker.moreaboutview.recyevent.OnRecyclerItemClickListener;
 import comt.leo.picker.moreaboutview.recyevent.RecyItemTouchHelperCallback;
 import comt.leo.picker.moreaboutview.utils.AnimationItem;
@@ -64,6 +65,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         arrayList.add(new MessageBean(19, "viewPager自定义无限循环广告栏"));
         arrayList.add(new MessageBean(20, "自适应标签和recycleView实现更多展开，收起"));
         arrayList.add(new MessageBean(21, "android将系统表情转换成ios表情"));
+        arrayList.add(new MessageBean(22, "Popupwindow的使用"));
         adapter = new RecycleAdapter(this, this);
         adapter.setData(arrayList);
 
@@ -167,7 +169,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     case 21:
                         startActivity(new Intent(MainActivity.this, ExprssActivity.class));
                         break;
-
+                    case 22:
+                        startActivity(new Intent(MainActivity.this, PopupActivity.class));
+                        break;
                 }
                 break;
         }
