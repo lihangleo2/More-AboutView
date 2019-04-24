@@ -33,4 +33,31 @@
         <item name="android:windowFullscreen">true</item>
         <item name="android:windowContentOverlay">@null</item>
     </style>
+
+    <style name="MainPopAnim" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/scale_main_pop_</item>
+        <item name="android:windowExitAnimation">@anim/scale_main_pop_out</item>
+    </style>
+
+    <style name="MainPopAnim_top" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/scale_popup_top_in</item>
+        <item name="android:windowExitAnimation">@anim/scale_popup_top_out</item>
+    </style>
+
+    <style name="MainPopAnim_bottom" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/scale_popup_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/scale_popup_bottom_out</item>
+    </style>
+
+
+    <style name="MainPopAnim_left" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/scale_popup_left_in</item>
+        <item name="android:windowExitAnimation">@anim/scale_popup_left_out</item>
+    </style>
+
+
+    <style name="MainPopAnim_right" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/scale_popup_right_in</item>
+        <item name="android:windowExitAnimation">@anim/scale_popup_right_out</item>
+    </style>
 </resources>
