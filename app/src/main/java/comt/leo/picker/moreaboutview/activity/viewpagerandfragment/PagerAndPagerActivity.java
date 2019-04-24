@@ -11,6 +11,7 @@ import android.util.TypedValue;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.DecelerateInterpolator;
+import android.widget.LinearLayout;
 
 import net.lucode.hackware.magicindicator.MagicIndicator;
 import net.lucode.hackware.magicindicator.ViewPagerHelper;
@@ -71,6 +72,7 @@ public class PagerAndPagerActivity extends AppCompatActivity {
     private void initMagicIndicator() {
         magicIndicator.setBackgroundColor(getResources().getColor(R.color.transparent));
         commonNavigator = new CommonNavigator(PagerAndPagerActivity.this);
+//        commonNavigator.setAdjustMode(true);//这里是全屏展示
         commonNavigator.setAdapter(new CommonNavigatorAdapter() {
             @Override
             public int getCount() {
@@ -106,6 +108,7 @@ public class PagerAndPagerActivity extends AppCompatActivity {
             public IPagerIndicator getIndicator(Context context) {
                 LinePagerIndicator indicator = new LinePagerIndicator(context);
                 indicator.setMode(LinePagerIndicator.MODE_EXACTLY);
+//                indicator.setMode(LinePagerIndicator.MODE_MATCH_EDGE);
                 indicator.setLineHeight(UIUtil.dip2px(context, 3));
                 indicator.setLineWidth(UIUtil.dip2px(context, 10));
                 indicator.setRoundRadius(UIUtil.dip2px(context, 3));
@@ -117,5 +120,11 @@ public class PagerAndPagerActivity extends AppCompatActivity {
         });
         magicIndicator.setNavigator(commonNavigator);
         ViewPagerHelper.bind(magicIndicator, viewPager);
+//        magicIndicator.setNavigator(commonNavigator);
+//        LinearLayout titleContainer = commonNavigator.getTitleContainer(); // must after setNavigator
+//        titleContainer.setShowDividers(LinearLayout.SHOW_DIVIDER_MIDDLE);
+//        titleContainer.setDividerPadding(UIUtil.dip2px(this, 50));
+//        titleContainer.setDividerDrawable(getResources().getDrawable(R.drawable.simple_splitter));
+//        ViewPagerHelper.bind(magicIndicator, viewPager);
     }
 }
