@@ -210,7 +210,10 @@
         <activity
             android:name=".popupwindow.PopupActivity"
             android:screenOrientation="portrait" />
-        <!--PopupActivity-->
+
+        <activity
+            android:name=".dialog.DialogActivity"
+            android:screenOrientation="portrait" />
 
     </application>
 
