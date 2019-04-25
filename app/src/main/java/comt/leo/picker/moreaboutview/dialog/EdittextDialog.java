@@ -23,11 +23,9 @@ public class EdittextDialog extends Dialog {
     private EditText edit_content;
 
     public EdittextDialog(Context context, View.OnClickListener listener) {
-        this(context, R.style.MyDialogStyleBottomLeo);
+        this(context, R.style.Dialog_nobg);
         setCanceledOnTouchOutside(true);
         this.listener = listener;
-//        Window dialogWindow = this.getWindow();
-//        dialogWindow.setGravity(Gravity.BOTTOM);
     }
 
 
