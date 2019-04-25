@@ -24,6 +24,7 @@ import comt.leo.picker.moreaboutview.activity.viewpagerandfragment.MagicIndicato
 import comt.leo.picker.moreaboutview.activity.viewpagerandfragment.ViewFragmentActivity;
 import comt.leo.picker.moreaboutview.adapter.RecycleAdapter;
 import comt.leo.picker.moreaboutview.bean.MessageBean;
+import comt.leo.picker.moreaboutview.dialog.DialogActivity;
 import comt.leo.picker.moreaboutview.popupwindow.PopupActivity;
 import comt.leo.picker.moreaboutview.recyevent.OnRecyclerItemClickListener;
 import comt.leo.picker.moreaboutview.recyevent.RecyItemTouchHelperCallback;
@@ -66,6 +67,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         arrayList.add(new MessageBean(20, "自适应标签和recycleView实现更多展开，收起"));
         arrayList.add(new MessageBean(21, "android将系统表情转换成ios表情"));
         arrayList.add(new MessageBean(22, "Popupwindow的使用"));
+        arrayList.add(new MessageBean(23, "dialog的使用"));
         adapter = new RecycleAdapter(this, this);
         adapter.setData(arrayList);
 
@@ -171,6 +173,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         break;
                     case 22:
                         startActivity(new Intent(MainActivity.this, PopupActivity.class));
+                        break;
+                    case 23:
+                        startActivity(new Intent(MainActivity.this, DialogActivity.class));
                         break;
                 }
                 break;
