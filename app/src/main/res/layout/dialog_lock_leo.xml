@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <!-- 这是带密码框的 -->
+        <RelativeLayout
+            android:id="@+id/relative_mima"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="175dp"
+                android:layout_height="132dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/shape_stoke_solid_white">
+
+
+                <TextView
+                    android:id="@+id/text_leo_1"
+                    android:layout_marginTop="37dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#666666"
+                    android:textSize="8sp"
+                    android:text="为确保用户信息安全，"
+                    android:layout_centerHorizontal="true"
+                    />
+
+                <TextView
+                    android:layout_below="@+id/text_leo_1"
+                    android:id="@+id/text_leo_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#666666"
+                    android:textSize="8sp"
+                    android:text="请输入登录密码才可操作。"
+                    android:layout_centerHorizontal="true"
+                    />
+
+                <EditText
+                    android:layout_marginTop="9dp"
+                    android:layout_below="@+id/text_leo_2"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/edit_passWord"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_for_login_edit"
+                    android:hint="请输入密码"
+                    android:imeOptions="flagNoExtractUi"
+                    android:inputType="textPassword"
+                    android:maxLength="17"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:singleLine="true"
+                    android:textColor="#666666"
+                    android:textColorHint="#cacaca"
+                    android:textSize="7sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:orientation="horizontal"
+                    android:layout_alignParentBottom="true"
+                    >
+                    <TextView
+                        android:id="@+id/text_goCreate"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="25dp"
+                        android:text="确认"
+                        android:gravity="center"
+                        android:textSize="8sp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/shape_lock_left"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/text_cancle"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="25dp"
+                        android:text="取消"
+                        android:gravity="center"
+                        android:textSize="8sp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/shape_lock_right"
+                        />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_centerHorizontal="true"
+                android:layout_width="48dp"
+                android:layout_height="48dp">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/circle_lock_login" />
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@mipmap/lingdang"
+                    android:layout_centerInParent="true"
+                    />
+            </RelativeLayout>
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

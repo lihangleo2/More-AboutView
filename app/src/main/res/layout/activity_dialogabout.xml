@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <Button
+        android:id="@+id/buttonPanel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="仿ios dialog"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <Button
+        android:id="@+id/buttonPane2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="正常的dialog带背景"
+        />
+
+    <Button
+        android:id="@+id/buttonPane3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="正常的dialog没有背景"
+        />
+
+    <Button
+        android:id="@+id/buttonPane4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="靠近底部的dialog"
+        />
+
+</LinearLayout>
