@@ -28,6 +28,7 @@ import comt.leo.picker.moreaboutview.dialog.DialogActivity;
 import comt.leo.picker.moreaboutview.popupwindow.PopupActivity;
 import comt.leo.picker.moreaboutview.recyevent.OnRecyclerItemClickListener;
 import comt.leo.picker.moreaboutview.recyevent.RecyItemTouchHelperCallback;
+import comt.leo.picker.moreaboutview.toast.ToastActivity;
 import comt.leo.picker.moreaboutview.utils.AnimationItem;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -68,6 +69,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         arrayList.add(new MessageBean(21, "android将系统表情转换成ios表情"));
         arrayList.add(new MessageBean(22, "Popupwindow的使用"));
         arrayList.add(new MessageBean(23, "dialog的使用"));
+        arrayList.add(new MessageBean(24, "自定义系统toast"));
         adapter = new RecycleAdapter(this, this);
         adapter.setData(arrayList);
 
@@ -176,6 +178,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         break;
                     case 23:
                         startActivity(new Intent(MainActivity.this, DialogActivity.class));
+                        break;
+                    case 24:
+                        startActivity(new Intent(MainActivity.this, ToastActivity.class));
                         break;
                 }
                 break;
