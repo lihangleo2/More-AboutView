@@ -3,4 +3,5 @@
 
     <dimen name="default_corner_radius">4dp</dimen>
     <dimen name="default_shadow_radius">4dp</dimen>
+    <dimen name="x300">300px</dimen>
 </resources>

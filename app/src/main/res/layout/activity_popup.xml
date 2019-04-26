@@ -43,4 +43,12 @@
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
         />
+
+    <Button
+        android:layout_below="@+id/buttonPane2"
+        android:id="@+id/buttonPane5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="可根据上下位置自适应pop"
+        />
 </RelativeLayout>

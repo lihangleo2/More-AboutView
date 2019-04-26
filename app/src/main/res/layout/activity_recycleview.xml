@@ -2,13 +2,11 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-    <Button
-        android:id="@+id/buttonPanel"
-        android:text="弹出自定义布局和时间及位置toast"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
         android:layout_centerInParent="true"
-        />
-
+        android:layout_marginLeft="40dp"
+        ></android.support.v7.widget.RecyclerView>
 </RelativeLayout>
