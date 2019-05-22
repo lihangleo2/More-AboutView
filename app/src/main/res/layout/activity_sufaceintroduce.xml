@@ -5,6 +5,7 @@
 
 
     <comt.leo.picker.moreaboutview.myView.SurfaceViewAbouts.SurfaceViewL
+        android:id="@+id/surfaceviewl"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </RelativeLayout>

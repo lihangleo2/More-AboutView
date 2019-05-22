@@ -2,11 +2,20 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        android:layout_centerInParent="true"
         android:layout_marginLeft="40dp"
-        ></android.support.v7.widget.RecyclerView>
+        android:layout_marginTop="40dp"></android.support.v7.widget.RecyclerView>
+
+
+    <comt.leo.picker.moreaboutview.recyclerflow.RecyclerLeftFlow
+        android:id="@+id/relativeFlow"
+        android:layout_width="match_parent"
+        android:layout_height="216dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        />
 </RelativeLayout>

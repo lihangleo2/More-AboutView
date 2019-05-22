@@ -12,20 +12,25 @@ import java.util.ArrayList;
 
 import comt.leo.picker.moreaboutview.R;
 import comt.leo.picker.moreaboutview.adapter.ManagerIconsAdapter;
+import comt.leo.picker.moreaboutview.recyclerflow.Adapter;
+import comt.leo.picker.moreaboutview.recyclerflow.RecyclerLeftFlow;
 
 /**
  * Created by leo
  * on 2019/4/26.
  */
-public class RecycleActivity extends AppCompatActivity {
+public class RecycleActivity extends AppCompatActivity  implements Adapter.onItemClick{
     private RecyclerView recyclerView;
     private RecyclerView.ItemDecoration itemDecoration;
+
+
+    private RecyclerLeftFlow relativeFlow;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycleview);
         recyclerView = findViewById(R.id.recyclerView);
-
+        relativeFlow = findViewById(R.id.relativeFlow);
         itemDecoration = new RecyclerView.ItemDecoration() {
             @Override
             public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
@@ -33,12 +38,10 @@ public class RecycleActivity extends AppCompatActivity {
                 outRect.right = -45;
             }
         };
-
         ArrayList<String> stringArr  = new ArrayList<>();
         for (int i = 0; i <6 ; i++) {
             stringArr.add("tu");
         }
-
         final ManagerIconsAdapter adapter = new ManagerIconsAdapter(this);
         ArrayList<String> stringList = new ArrayList<>();
         stringList.addAll(stringArr);
@@ -50,5 +53,19 @@ public class RecycleActivity extends AppCompatActivity {
         recyclerView.removeItemDecoration(itemDecoration);
         recyclerView.addItemDecoration(itemDecoration);
         recyclerView.setAdapter(adapter);
+
+
+
+        /**
+         * 自定义recyclerView滑动重叠
+         * */
+        relativeFlow.setAdapter(new Adapter(this, this));
+
+
+    }
+
+    @Override
+    public void clickItem(int pos) {
+        relativeFlow.smoothScrollToPosition(pos);
     }
 }

@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         arrayList.add(new MessageBean(22, "Popupwindow的使用"));
         arrayList.add(new MessageBean(23, "dialog的使用"));
         arrayList.add(new MessageBean(24, "自定义系统toast"));
-        arrayList.add(new MessageBean(25, "recyclerView重叠item样式"));
+        arrayList.add(new MessageBean(25, "recyclerView重叠item样式&自定义recyclerView滑动重叠"));
         adapter = new RecycleAdapter(this, this);
         adapter.setData(arrayList);
 
