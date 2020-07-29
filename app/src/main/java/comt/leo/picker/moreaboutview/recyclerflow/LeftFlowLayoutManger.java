@@ -106,13 +106,13 @@ public class LeftFlowLayoutManger extends RecyclerView.LayoutManager {
      * 屏幕中最多显示完整item的个数  即最后不能滑动的item个数
      * endNum为1时候有个bug
      */
-    private int endNum;
+    private int endNum = 1;
 
     public LeftFlowLayoutManger(int screenWidth) {
         this.screenWidth = screenWidth;
-        if (mDecoratedChildWidth != 0) {
-            endNum = (screenWidth / mDecoratedChildWidth) >= 2 ? (screenWidth / mDecoratedChildWidth) : 2;
-        }
+//        if (mDecoratedChildWidth != 0) {
+//            endNum = (screenWidth / mDecoratedChildWidth) >= 2 ? (screenWidth / mDecoratedChildWidth) : 2;
+//        }
     }
 
     @Override
@@ -144,9 +144,9 @@ public class LeftFlowLayoutManger extends RecyclerView.LayoutManager {
         //计算测量布局的宽高
         mDecoratedChildWidth = getDecoratedMeasuredWidth(scrap);
         mDecoratedChildHeight = getDecoratedMeasuredHeight(scrap);
-        if (mDecoratedChildWidth != 0) {
-            endNum = (screenWidth / mDecoratedChildWidth) >= 2 ? (screenWidth / mDecoratedChildWidth) : 2;
-        }
+//        if (mDecoratedChildWidth != 0) {
+//            endNum = (screenWidth / mDecoratedChildWidth) >= 2 ? (screenWidth / mDecoratedChildWidth) : 2;
+//        }
 
         float offset = 0;
 
