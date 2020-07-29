@@ -79,19 +79,7 @@ public class RecyclerLeftFlow extends RecyclerView {
 
     @Override
     protected int getChildDrawingOrder(int childCount, int i) {
-        int center = getCoverFlowLayout().getCenterPosition()
-                - getCoverFlowLayout().getFirstVisiblePosition(); //计算正在显示的所有Item的中间位置
-        if (center < 0) center = 0;
-        else if (center > childCount) center = childCount;
-        int order;
-        if (i == center) {
-            order = childCount - 1;
-        } else if (i > center) {
-            order = center + childCount - 1 - i;
-        } else {
-            order = i;
-        }
-        return order;
+        return Math.abs(childCount - 1 - i);
     }
 
     /**
